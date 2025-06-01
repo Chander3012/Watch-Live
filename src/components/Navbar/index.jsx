@@ -29,7 +29,7 @@ const Navbar = () => {
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#request">Request</a></li>
               {/* New links */}
-              <li><Link to="/indian">Indian</Link></li>
+{/*               <li><Link to="/indian">Indian</Link></li> */}
               {/* <li><Link to="/leaked">Leaked</Link></li> */}
               {/* <li><Link to="/popular">Popular</Link></li> */}
               {/* <li><button className={styles.loginBtn}>Login</button></li> */}
