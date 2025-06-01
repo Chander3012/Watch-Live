@@ -10,18 +10,16 @@
 }
 
 .player {
-  
   width: 100%;
+  max-width: 960px;
   background-color: #1a1a2e;
   padding: 1.5rem 2rem;
   border-radius: 16px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  
 }
 
 .videoContainer {
-  max-width: 960px;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
@@ -67,10 +65,28 @@
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .downloadButton:hover {
   background-color: #fcb543;
+}
+
+.backButton {
+  background-color: #2c2f44;
+  color: #ffd166;
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #ffd166;
+  color: #000;
 }
 
 /* Responsive */
@@ -90,20 +106,12 @@
   }
 }
 
-
-.backButton {
-  background-color: #2c2f44;
-  color: #ffd166;
-  border: none;
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.backButton:hover {
-  background-color: #ffd166;
-  color: #000;
+.overlayLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: transparent;
 }
