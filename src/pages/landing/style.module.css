@@ -1,0 +1,314 @@
+.heroSection {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.heroContent {
+  flex: 1 1 500px;
+  text-align: left;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaButton,
+.secondaryButton {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.ctaButton {
+  background: linear-gradient(45deg, #ff6b6b, #ffd166);
+  color: #1e1e2f;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.6);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 2px solid #ffd166;
+  color: #ffd166;
+}
+
+.ctaButton:hover,
+.ctaButton:focus,
+.secondaryButton:hover,
+.secondaryButton:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(45deg, #ffd166, #ff6b6b);
+}
+
+.secondaryButton:hover {
+  background-color: #ffd166;
+  color: #1e1e2f;
+}
+
+.heroImage {
+  flex: 1 1 500px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .heroContent {
+    text-align: center;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+
+  .heroImage {
+    height: 200px;
+    width: 100%;
+  }
+}
+.heroImage {
+  background-image: url('../../assets/medium-shot-woman-bdsm-aesthetics.jpg');
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1e1e2f;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 5rem 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #f9f9ff, #fff);
+  border-radius: 16px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.serviceCard {
+  padding: 2rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #ffd16633, transparent 60%);
+  z-index: 0;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceCard:hover,
+.serviceCard:focus-within {
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
+  transform: translateY(-6px);
+  border-color: #ff6b6b;
+}
+
+.serviceCard h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceCard p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 5rem 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.faqItem {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.faqItem h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e1e2f;
+  margin-bottom: 0.4rem;
+}
+
+.faqItem p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Content Request Form Section */
+.requestSection {
+  padding: 5rem 2rem;
+  background-color: #fff8f5; /* Soft background */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.requestForm {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  animation: fadeInUp 1s ease forwards;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.requestForm label {
+  font-weight: 600;
+  color: #1e1e2f;
+  user-select: none;
+}
+
+.requestForm input,
+.requestForm textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  background-color: #fdfdfd;
+}
+
+.requestForm input:hover,
+.requestForm textarea:hover {
+  border-color: #ffb3b3;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.15);
+}
+
+.requestForm input:focus,
+.requestForm textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  background-color: #ffd166;
+  color: #1e1e2f;
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.4rem !important;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .requestSection {
+    padding: 3rem 1rem;
+  }
+}

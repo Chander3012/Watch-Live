@@ -1,0 +1,118 @@
+.videoSection {
+  background-color: #12121f;
+  padding: 4rem 1.5rem 6rem;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.videoSection > h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.videoSection > p {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 2.8rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoGrid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.videoCard {
+  background-color: #222233;
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.videoCard:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 24px rgba(255, 107, 107, 0.75);
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-bottom: 1.2rem;
+}
+
+.videoCard:hover .videoThumbnail {
+  transform: scale(1.03);
+}
+
+.videoTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #ffd166;
+  text-align: center;
+}
+
+.videoName {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  user-select: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .videoGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .videoCard {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .videoThumbnail {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .videoCard {
+    padding: 1rem;
+  }
+
+  .videoThumbnail {
+    height: 140px;
+  }
+}

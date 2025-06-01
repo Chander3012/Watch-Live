@@ -1,0 +1,113 @@
+.navbar {
+  background-color: #1e1e2f;
+  padding: 1rem 2rem;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #ffd166;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navLinks a {
+  color: #e2e2e2;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #ffffff;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.loginBtn {
+  background-color: #ffd166;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: #1e1e2f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #2a2a40;
+    flex-direction: column;
+    width: 220px;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .open {
+    display: flex;
+  }
+
+  .navLinks li {
+    margin: 0.5rem 0;
+  }
+}
